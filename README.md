@@ -1,10 +1,9 @@
-![ex1](src/logo.png)
+![ex1](src/llava_protector.png)
 # MLLM-Protector: Ensuring MLLM’s Safety without Hurting Performance
 
 This repository contains the code and data for the paper titled "MLLM-Protector: Ensuring MLLM’s Safety without Hurting Performance".
 
 [Paper](coming soon), [Dataset](coming soon), [Model Parameters](coming soon)
-![ex1](src/llava_protector.png)
 
 [comment]: <> (## Install Packages)
 
