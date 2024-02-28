@@ -1,0 +1,13 @@
+deepspeed --include=localhost:0,1 --master_port 30006 llava/train/harmdetector_train_saferlhf.py \
+          --model_name=openlm-research/open_llama_3b_v2 \
+          --per_device_train_batch_size=4 \
+          --per_device_eval_batch_size 8 \
+          --learning_rate 2e-5 \
+          --num_train_epochs 4 \
+          --deepspeed scripts/zero2.json \
+          --train_subset -1 \
+          --weight_decay 0 \
+          --lora_rank 32 \
+          --eval_subset 0 \
+          --eval_first_step True \
+          --run_name pku_plus
