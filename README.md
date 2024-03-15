@@ -19,6 +19,25 @@ pip install -e .
 
 ```
 
+## Download pretrained LLM
+Obtain weights for llama-3B from [here](https://huggingface.co/openlm-research/open_llama_3b_v2)
+
+## Prepare evaluation data
+
+```
+mkdir eval_polite
+```
+Prepare benchmark data from [MM-SafetyBench](https://github.com/isXinLiu/MM-SafetyBench).
+
+Here is the data structure:
+
+```
+dataset/coco/
+├── gpt4_generated_questions/
+├── imgs/
+├── processed_questions/
+├── coco_task_annotation.json
+```
 ## Train Harm Detector
 
 ```
@@ -30,10 +49,15 @@ bash scripts/train_harm_detector.sh
 ```
 bash scripts/train_detoxifier.sh
 ```
-
-## Inference
+## Merge Lora
 ```
-bash scripts/v1_5/eval/robust_eval.sh
+python debug/merge_peft_adapter.py --base_model_name path-to-llama_3b_v2 --adapter_model_name path-to-lora --output_name path-to-merged-model
+```
+
+
+## Generate reponses in parallel
+```
+bash llava/eval/eval_multi_safeguard.sh path-to-llava path-to-result num_gpu temperature path-to-detector path-to-detoxifier
 ```
 
 ## Evaluation
