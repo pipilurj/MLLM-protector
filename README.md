@@ -51,7 +51,7 @@ bash scripts/train_detoxifier.sh
 ```
 ## Merge Lora
 ```
-python debug/merge_peft_adapter.py --base_model_name path-to-llama_3b_v2 --adapter_model_name path-to-lora --output_name path-to-merged-model
+python scripts/merge_peft_adapter.py --base_model_name path-to-llama_3b_v2 --adapter_model_name path-to-lora --output_name path-to-merged-model
 ```
 
 
