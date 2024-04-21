@@ -23,7 +23,9 @@ pip install -e .
 Obtain weights for llama-3B from [here](https://huggingface.co/openlm-research/open_llama_3b_v2)
 
 ## Download checkpoint for harm detector and detoxfier
-Obtain lora checkpoint for harm detector from [here](https://huggingface.co/renjiepi/mllm_protector_detector)
+Obtain lora checkpoint for harm detector with open-llama-3b from [here](https://huggingface.co/renjiepi/protector_detector_3b_lora)
+
+Obtain lora checkpoint for harm detector with llama2-7b from [here](https://huggingface.co/renjiepi/protector_detector_7b_lora)
 
 Obtain lora checkpoint for detoxifer from [here](https://huggingface.co/renjiepi/mllm_protector_detoxifier)
 
